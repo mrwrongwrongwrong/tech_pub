@@ -1,0 +1,4 @@
+----string & char
+string类型就是一个特殊的char数组，如：string str=“qwerty”,str[0]‘q’,str[1]‘w’…和字符数组一样，
+所以，char a[],char b;可以把char[ ]型，char型的直接赋给string，str = a，str = b, 是正确的。
+
