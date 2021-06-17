@@ -1,0 +1,22 @@
+---Enumerate
+enumerate的意思即为枚举，列举。
+一句话来说，enumerate的作用就是对可迭代的数据进行标号并将其里面的数据和标号一并打印出来。
+看一下enumerate的函数
+enumerate(iterable, start=0)
+
+def enumerate(sequence, start=0):
+    n = start
+    for elem in sequence:
+        yield n, elem
+        n += 1
+        
+>>> test= [1,2,3,4,5]
+>>> for i,num in enumerate(test):
+       print("%d-th is %d" %(i,num))
+
+0-th is 1
+1-th is 2
+2-th is 3
+3-th is 4
+4-th is 5
+原文链接：https://blog.csdn.net/IAMoldpan/article/details/78487809
