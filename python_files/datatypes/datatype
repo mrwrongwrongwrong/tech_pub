@@ -1,0 +1,8 @@
+---character and string
+char is one character. String is zero or more characters.
+
+char is a primitive type. String is a class.
+
+char c = 'a';
+String s = "Hi!";
+#https://stackoverflow.com/questions/10430043/difference-between-char-and-string-in-java/10430082
