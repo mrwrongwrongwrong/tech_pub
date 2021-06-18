@@ -1,0 +1,29 @@
+---Tqdm
+Tqdm 是一个快速，可扩展的Python进度条，可以在 Python 长循环中添加一个进度提示信息，用户只需要封装任意的迭代器 tqdm(iterator)。
+
+它是用来显示进度条的，很漂亮，使用很直观（在循环体里边加个tqdm），而且基本不影响原程序效率。名副其实的“太强太美”了！这样在写运行时间很长的程序时，是该多么舒服啊！
+
+链接：https://www.jianshu.com/p/8e1f07d31a20
+
+from tqdm.notebook import tqdm
+pbar = tqdm(range(N_EPOCHS))
+
+for i in pbar:
+  total_train_loss = 0.0
+  total_train_correct = 0.0
+  total_validation_loss = 0.0
+  total_validation_correct = 0.0
+
+  model.train()
+
+  for batch in tqdm(train_dataloader, leave=False):
+    loss, correct = get_loss_and_correct(model, batch, criterion, device)
+    step(loss, optimizer)
+    total_train_loss += loss.item()
+    total_train_correct += correct.item()
+
+  with torch.no_grad():
+    for batch in validation_dataloader:
+      loss, correct = get_loss_and_correct(model, batch, criterion, device)
+      total_validation_loss += loss.item()
+      total_validation_correct += correct.item()
