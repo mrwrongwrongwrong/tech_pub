@@ -1,0 +1,10 @@
+
+
+In [187]: reader = pd.read_csv('tmp.sv', sep='|', chunksize=4)
+ 
+In [188]: reader
+Out[188]: <pandas.io.parsers.TextFileReader at 0x7f2b428c17f0>
+ 
+In [189]: for chunk in reader:
+
+原文链接：https://blog.csdn.net/w55100/article/details/90111254
