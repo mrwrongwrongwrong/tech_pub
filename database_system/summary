@@ -1,0 +1,19 @@
+
+
+
+Relationship
+Chapter4:
+EER = ER + 
+	1. Subclass/superclass (type inheritance)
+	2. Specialization/generalization
+	3. Category/union
+	4. Aggregation
+
+---specialization
+	1. Constraints 
+		a. Predicate-defined (values on attribute)
+		b. Defining predicate (condition)
+		c. Attribute-defined(same attribute of the superclass)
+		d. User-defined
+		e. Disjointness constraint
+		f. Completeness(totalness) constraint
