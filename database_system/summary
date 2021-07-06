@@ -1,4 +1,26 @@
 
+---Relational Database
+1.ER:Entity,relationship,attribute
+	Weak Entity, partial key
+	Constraints in relationship: 1.cardinality ratio: 1:1, 1:N, N:1,M:N (between entity and entity)
+				     2.participantion constraint: total or partial (whether being related or not)
+	Attribute:
+		key attribute, multivalued attribute, composite attribute, derived attribute
+
+2.EER(all about superclass and subclass):
+	EER model includes all the concepts from ER model, in addition:
+	1. Subclasses and superclasses
+	2. Specialization and generaliztion 
+	3. Category or union type 
+	4. Attribute and relationship inheritance 
+	Hence, its all about the relation between superclass and subclass.
+
+	
+
+Superclass/subclass
+	1. Superclass/subclass relationship: Employee/Secretary
+	2. IS-A relationship: Secretary IS-A Employee (disjoint, overlapping, total, partial)
+Ps. ISA can be:(the property of ISA)
 
 
 Relationship
