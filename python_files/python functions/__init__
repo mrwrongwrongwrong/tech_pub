@@ -1,0 +1,75 @@
+
+
+https://www.zhihu.com/question/46973549
+
+---创建一个Student类
+class Student():
+    pass
+    
+---在类里面 创建一个实例：
+stu_1 = Student()
+
+解释：
+通过class语句定义的类Student，就好像一个“模具”，它可以定义作为一个学生应该具有的各种特点（这里暂未具体定义）；
+而在类名Student后加圆括号()，组成一个类似函数调用的形式Student()，则执行了一个叫做实例化的过程，即根据定义好的规则，创建一个包含具体数据的学生对象（实例）。
+为了使用创建的学生实例stu_1，我们可以继续为它添加或修改属性，比如添加一组成绩scores ，由三个整数组成：stu_1.scores = [80, 90, 85]
+
+但这样明显存在很多问题，一旦我们需要处理很多学生实例，比如stu_2, stu_3, ...，这样不但带来书写上的麻烦，还容易带来错误，万一某些地方scores打错了，或者干脆忘记了，相应的学生实例就会缺少正确的scores属性。
+更重要的是，这样的scores属性是暴露出来的，它的使用完全被外面控制着，没有起到“封装”的效果，既不方便也不靠谱。
+一个自然的解决方案是允许我们在执行实例化过程Student()时传入一些参数，以方便且正确地初始化/设置一些属性值，
+那么如何定义这种初始化行为呢？答案就是在类内部定义一个__init__函数。这时，Student的定义将变成（我们先用一段注释占着__init__函数内的位置）。
+class Student():
+    def __init__(self, score1, score2, score3):
+        # 相关初始化语句
+
+定义__init__后，执行实例化的过程须变成Student(arg1, arg2, arg3)，新建的实例本身，连带其中的参数，会一并传给__init__函数自动并执行它。
+所以__init__函数的参数列表会在开头多出一项，它永远指代新建的那个实例对象，Python语法要求这个参数必须要有，而名称随意，习惯上就命为self。
+新建的实例传给self后，就可以在__init__函数内创建并初始化它的属性了，比如之前的scores，就可以写为class Student():
+    def __init__(self, score1, score2, score3):
+        self.scores = [score1, score2, score3]
+此时，若再要创建拥有具体成绩的学生实例，就只需stu_1 = Student(80, 90, 85)
+
+
+
+链接：https://www.zhihu.com/question/46973549/answer/293788116
+以下内容为节选：class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+class关键字后面跟类的名称就定义了一个类，类的名称可以任意，采用驼峰命名法，也即每个单词的首字母大写，如Book、Person、WildAnimal等这里的__init__方法是一个特殊的方法（init是单词初始化initialization的省略形式），
+在使用类创建对象之后被执行，用于给新创建的对象初始化属性用。初始化属性的语句就是self.name = name这种了，这一句不太好理解，我们把它改编一下就好理解了：def __init__(self, n, a):
+    self.name = n
+    self.age = a
+首先这是一个方法，方法的形参有self，n和a三个。这个self，表示对象本身，谁调用，就表示谁（这句话不好理解，先记住，我们后面分析）。
+语法上，类中的方法的第一个参数都是self，这是和普通方法区别的地方。这里self.name = n和self.age = a表示将外部传来的n和a，赋值给了self对象的name和age属性。
+这里的n和a，其实叫什么都可以，但是会有个问题：一般我们调用方法的时候，想自动提示一下或者查看文档看一下这个方法的参数要求，如果形参名都是n、a、m、i这些，会让人摸不着头脑，不知道到底该传入什么样的实参。
+因为这里我们传入实参是为了给属性赋值，为了能见名知意，将形参的名字定义的跟属性一致，调用者就知道该怎么传参了。所以才有了上面的写法。再来说创建对象：p = Person('小明', 20)
+这句话就创建出来了一个具体的人，并且给这个人起了个名字叫小明，指定了小明的年龄为20，并且将小明这个对象赋值给了变量p，此时p就表示小明这个人（对象）这就造出了一个人。
+既然你是神，当然想造出什么样的人都可以，比如造出一个200岁的叫杰拉考的人：p = Person('杰拉考', 200)
+这句话后面的Person('杰拉考', 200)用于创建出了一个对象（人），并且调用了init(self,name,age)方法完成了该人的属性的初始化，杰拉考赋值给了name，200赋值给了age属性。那self呢？self不需要传参，
+上面我们说过，self，表示对象本身，谁调用，就表示谁，此时的self就表示你Person('杰拉考', 200)创造出来的那个对象，也即是p。也即，我们创造出了p，然后给p的属性赋了值，此时p就表示拥有属性值之后的那个人。
+可以使用点.来调用对象的属性，比如输出p的名字和年龄，完整代码为：
+class Person:              ------class Person():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+p = Person('杰拉考', 200)
+print(p.name)
+print(p.age)
+输出结果：杰拉考
+200
+接下来我们再在Person类中定义一个方法，用于自我介绍：
+def desc(self):
+    print("我叫%s，今年%d岁" % (self.name, self.age))
+在类的内部，访问自己的属性和方法，都需要通过self，self就是外部对象在类内部的表示，此时可以使用p调用该方法，完整代码如下：
+class Person:              ------class Person():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def desc(self):
+        print("我叫%s，今年%d岁" % (self.name, self.age))
+p = Person('杰拉考', 200)
+# 调用自我介绍方法 desc方法中的self就是外部的这个p
+p.desc()
+输出为：我叫杰拉考，今年200岁
+当前desc方法中的self，就是外部的那个对象p，如果我再定义了一个对象p2，那么p2调用desc时，desc中的self就表示p2这个对象。正所谓：谁调用，就表示谁
