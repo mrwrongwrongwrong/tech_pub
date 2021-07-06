@@ -12,4 +12,4 @@ lis.push_front(item)                                         - it inserts item a
 lis.erase(iterator)                                            - it removes the item pointed by iterator 
 list.front()                                                        - ﬁrst element 
 list.back()                                                       - last element 
-lis.clear()                                                        - it removes all elements
+list.clear()                                                        - it removes all elements
