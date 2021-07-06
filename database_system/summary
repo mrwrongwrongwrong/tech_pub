@@ -4,7 +4,8 @@
 	Weak Entity, partial key
 	Relationship: Binary, Ternary, n-ary
 	Constraints in relationship: 1.cardinality ratio: 1:1, 1:N, N:1,M:N (between entity and entity)
-				     2.participantion constraint: total or partial (whether being related or not)
+				     2.participantion constraint: total or partial (whether being related or not)  每次判断时，问自己一个问题：是不是这个entity的每个entity instance都可以参与？若是，则totoal；若不是，则partial。
+				     	total:这个entity的每个entity instance都可以参与， partial
 	Attribute:
 		key attribute, multivalued attribute, composite attribute, derived attribute
 
