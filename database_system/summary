@@ -67,3 +67,9 @@ EER = ER +
 	ThetaJoin:
 
 ---From ER schema to Relational Database Schema:
+对strong entity 和 weak entity而言，问题在primary key的选取上；若没有primary key， 用surrogate key 组装一个primary key出来。
+对relationship而言，分为1:1，1:N，N:M，三种情况。
+在1:N中，从N这边entity的foreign key指向 1那边entity的primary key。 注意：foreign key并不是当下这个entity的primary key，只是在这个relationship中连接另一个entity的primary key所用。
+在N:M中，需要建立一个中间的relationship的entity作为过渡，这个entity有两个foreign key，分别指向对应各自entity的parimary key。 注意：这个relationship过度的entity也可有其他的attribute。
+page291-292
+	
