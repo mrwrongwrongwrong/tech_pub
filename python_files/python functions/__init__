@@ -73,3 +73,50 @@ p = Person('杰拉考', 200)
 p.desc()
 输出为：我叫杰拉考，今年200岁
 当前desc方法中的self，就是外部的那个对象p，如果我再定义了一个对象p2，那么p2调用desc时，desc中的self就表示p2这个对象。正所谓：谁调用，就表示谁
+
+
+要求能够拿走的石头的最大数量。提示：就是求这个图上面不连通组件的数量。解决办法就是使用 union find, 将坐标作为 key, 互相映射。
+def to_tuple(li):
+    return (li[0], li[1])
+
+class UnionFind:
+    def __init__(self):
+        self.size = 0
+        self.map = {}
+        
+    def add(self, element):
+        self.map[to_tuple(element)] = element
+        self.size += 1
+        
+    def find(self, element):
+        father = self.map[to_tuple(element)]
+        if father != element:
+            return self.find(father)
+        else:
+            return father
+        
+    def union(self, e1, e2):
+        root1 = self.find(e1)
+        root2 = self.find(e2)
+        if root1 != root2:
+            self.map[to_tuple(root1)] = root2
+            self.size -= 1
+        
+
+class Solution:
+    def removeStones(self, stones):
+        """
+        :type stones: List[List[int]]
+        :rtype: int
+        """
+        uf = UnionFind()
+        for stone in stones:
+            uf.add(stone)
+        length = len(stones)
+        for i in range(length - 1):
+            for j in range(i + 1, length):
+                if stones[i][0] == stones[j][0] or stones[i][1] == stones[j][1]:
+                    uf.union(stones[i], stones[j])
+        return length - uf.size
+————————————————
+原文链接：https://blog.csdn.net/clifnich/article/details/86399153
