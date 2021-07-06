@@ -39,3 +39,19 @@ EER = ER +
 		d. User-defined
 		e. Disjointness constraint
 		f. Completeness(totalness) constraint
+		
+---Operations in SQL 
+	Select:
+	Project:
+	Rename:
+	Union:
+	Intersection:
+	Division:
+	Cartesian Product:
+	Difference:
+	Join:
+	Natural Join:
+	Inner Join:
+	EquiJoin:
+	ThetaJoin:
+	
