@@ -1,5 +1,11 @@
 
 ---Relational Database
+
+0. Schema
+ER schema 
+Relational database Schema
+page 290
+
 1.ER:Entity,relationship,attribute
 	Weak Entity, partial key
 	Relationship: Binary, Ternary, n-ary
