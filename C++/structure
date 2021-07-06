@@ -1,6 +1,6 @@
 
 
-
+---List
 A C++ list is a double linked list. The list class is a template, it must be initialized with the type of the contained elements.
 #include <list>                                               <— header ﬁle containing the deﬁnition 
 using namespace std;                                   <— list is in the std namespace 
