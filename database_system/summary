@@ -1,4 +1,4 @@
-
+----------------------Coneceptual Design---------------------------------
 ---Relational Database
 
 0. Schema
@@ -48,6 +48,9 @@ EER = ER +
 		e. Disjointness constraint
 		f. Completeness(totalness) constraint
 		
+	
+	
+----------------------Physical Design---------------------------------	
 ---Operations in SQL 
 	Select:
 	Project:
@@ -62,4 +65,5 @@ EER = ER +
 	Inner Join:
 	EquiJoin:
 	ThetaJoin:
-	
+
+---From ER schema to Relational Database Schema:
