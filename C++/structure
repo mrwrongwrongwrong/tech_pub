@@ -1,0 +1,15 @@
+
+
+
+A C++ list is a double linked list. The list class is a template, it must be initialized with the type of the contained elements.
+#include <list>                                               <— header ﬁle containing the deﬁnition 
+using namespace std;                                   <— list is in the std namespace 
+list<int> l;                                                       <— it creates a container of integers 
+list<int*> l;                                                      <— it creates a container of pointers to integers
+Useful methods and operators, we assume that lis is a list:
+lis.push_back(item)                                        - it inserts item at the end 
+lis.push_front(item)                                         - it inserts item at the beginning 
+lis.erase(iterator)                                            - it removes the item pointed by iterator 
+list.front()                                                        - ﬁrst element 
+list.back()                                                       - last element 
+lis.clear()                                                        - it removes all elements
