@@ -1,0 +1,9 @@
+---gitpush
+git checkout "your-branch-name"
+git add .
+git commit -m "add demo code"
+git push origin yuezhou
+
+---git_build_branch
+git branch     (https://blog.csdn.net/elisonwu/article/details/8090896)
+git checkout
