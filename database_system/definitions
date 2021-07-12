@@ -1,0 +1,12 @@
+
+
+A relation schema2 R, denoted by R(A1, A2, ... , An), is made up of a relation name R and a list of attributes, A1, A2, ... , An.
+Each attribute Ai is the name of a role played by some domain D in the relation schema R. D is called the domain of Ai and is denoted by dom(Ai). 
+A relation schema is used to describe a relation; R is called the name of this relation. The degree (or arity) of a relation is the number of attributes n of its relation schema.
+
+A relation (or relation state)4 r of the relation schema R(A1, A2, ... , An), also denoted by r(R), is a set of n-tuples r = {t1, t2, ... , tm}. 
+Each n-tuple t is an ordered list of n valuest=<v1,v2,...,vn>,whereeachvaluevi,1≤i≤n,isanelementofdom(Ai)oris a special NULL value. (NULL values are discussed further below and in Section 5.1.2.) 
+The ith value in tuple t, which corresponds to the attribute Ai, is referred to as t[Ai] or t.Ai (or t[i] if we use the positional notation). 
+说的意思是，有m行，n列
+A_i代表的是一个attribute
+t_i代表的是一个row
