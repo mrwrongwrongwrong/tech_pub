@@ -1,0 +1,34 @@
+SELECT
+---basic format
+FROM
+WHERE
+ORDER BY
+GROUP BY
+HAVING
+
+---UNION operation(binary)
+UNION(between two tables)
+
+---DELETE operation(unary)
+DELETE FROM EMPLOYEE
+WHERE Lname = ‘Brown’;
+
+---UPDATE operation(unary)
+UPDATE EMPLOYEE
+SET Salary = Salary * 1.1
+WHERE Dno = 5;
+
+---instert values into a table
+INSERT INTO    EMPLOYEE (Fname, Lname, Dno)
+VALUES         (‘Robert’, ‘Hatcher’, 5);
+
+---insert a table into a table
+CREATE TABLE    WORKS_ON_INFO
+(Emp_name       VARCHAR(15),
+ Proj_name      VARCHAR(15),
+ Hours_per_week DECIMAL(3,1) );
+ 
+INSERT INTO     WORKS_ON_INFO ( Emp_name, Proj_name, Hours_per_week )
+SELECT          E.Lname, P.Pname, W.Hours
+FROM            PROJECT P, WORKS_ON W, EMPLOYEE E
+WHERE           P.Pnumber = W.Pno AND W.Essn = E.Ssn;
