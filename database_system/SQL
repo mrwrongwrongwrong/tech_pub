@@ -33,7 +33,7 @@ SELECT          E.Lname, P.Pname, W.Hours
 FROM            PROJECT P, WORKS_ON W, EMPLOYEE E
 WHERE           P.Pnumber = W.Pno AND W.Essn = E.Ssn;
 
----CREATE a similar table
+---CREATE a similar table(fundamental of database page 200 seventh edition)
 CREATE TABLE   D5EMPS LIKE EMPLOYEE 
 (SELECT        E.*
 FROM           EMPLOYEE AS E
