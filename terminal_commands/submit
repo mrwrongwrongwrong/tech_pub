@@ -6,3 +6,5 @@ https://stackoverflow.com/questions/1273569/upload-folder-via-mac-terminal
 scp cool_stuff.txt sanjeev@example.com:/this/path/right/here
 scp sanjeev@example.com:cool_stuff.txt /this/path/right/here
 https://superuser.com/questions/850740/how-to-upload-local-file-to-server-through-linux-terminal
+
+upload as zip file then unzip it on server
