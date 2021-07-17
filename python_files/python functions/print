@@ -1,0 +1,9 @@
+
+---general format:
+print("%s",%(''))
+print("%d",%())
+
+%s stands for string and %d stands for digit
+
+https://www.runoob.com/w3cnote/python3-print-func-b.html
+https://blog.csdn.net/winycg/article/details/78512300
