@@ -1,0 +1,22 @@
+
+https://docs.python.org/zh-cn/3/tutorial/errors.html
+
+while True:
+...     try:
+...         x = int(input("Please enter a number: "))
+...         break
+...     except ValueError:
+...         print("Oops!  That was no valid number.  Try again...")
+...
+
+try 语句的工作原理如下：
+
+首先，执行 try 子句 （try 和 except 关键字之间的（多行）语句）。
+
+如果没有触发异常，则跳过 except 子句，try 语句执行完毕。
+
+如果执行 try 子句时发生了异常，则跳过该子句中剩下的部分。如果异常的类型与 except 关键字后面的异常匹配，则执行 except 子句，然后，继续执行 try 语句之后的代码。
+
+如果发生的异常不是 except 子句中列示的异常，则将其传递到外部的 try 语句中；如果没有找到处理程序，则它是一个 未处理异常，语句执行将终止，并显示如上所示的消息。
+
+try 语句可以有多个 except 子句，可为不同异常指定相应的处理程序。但最多只会执行一个处理程序。处理程序只处理对应的 try 子句中发生的异常，而不处理同一 try 语句内其他处理程序中的异常。except 子句可以用元组命名多个异常，例如：
