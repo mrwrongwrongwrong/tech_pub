@@ -1,0 +1,21 @@
+建一个文件夹code, 把a.py, b.py, c.py 都放到这个新建的文件夹里
+
+再在这个文件夹code里新建一个__init__.py文件(两个下划线, 文件为空即可, 不用加代码)
+
+新建一个环境变量PYTHONPATH, 将code这个文件夹的绝对路径加到这个PYTHONPATH环境变量中 ( 如果已经有这个变量了, 就直接在这个变量后面追加 )
+
+当运行a需要引用b的时候, 就在a里import b就好了
+
+https://zhidao.baidu.com/question/396158973003004165.html
+
+
+https://blog.csdn.net/winycg/article/details/78512300
+
+A.py文件：
+
+def add(x,y):
+    print('和为：%d'%(x+y))
+
+B.py文件：
+import A
+A.add(1,2)
