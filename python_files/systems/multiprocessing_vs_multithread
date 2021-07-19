@@ -1,0 +1,4 @@
+
+multiprocessing is how many processes you have.
+
+multithreading is how many threads you have in one process.
