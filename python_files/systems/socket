@@ -58,3 +58,18 @@ Socket简介Socket是进程通讯的一种方式，即调用这个网络库的�
 作者：wuxinliulei
 链接：https://www.zhihu.com/question/29637351/answer/67610424
 
+
+Socket难点
+数据粘包
+心跳维持
+数据丢包
+性能问题
+
+7层网络模型-
+OSI基础层：物理层（Physical）、数据链路层（Datalink）、网络层（Network)
+传输层（Transport)：TCP-UDP协议层、
+Socket高级层：会话层（Session)、表示层（Presentation）、应用层（Application)
+
+作者：慕课网
+链接：https://www.zhihu.com/question/29637351/answer/1945667834
+
