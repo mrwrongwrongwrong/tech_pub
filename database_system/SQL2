@@ -1,0 +1,53 @@
+---EXISTS & NOT EXISTS
+#https://www.runoob.com/sql/sql-exists.html
+EXISTS 运算符用于判断查询子句是否有记录，如果有一条或多条记录存在返回 True，否则返回 False。
+SQL EXISTS 语法
+SELECT column_name(s)
+FROM table_name
+WHERE EXISTS
+(SELECT column_name FROM table_name WHERE condition);
+
+
+
+
+
+https://zhuanlan.zhihu.com/p/20005249
+SELECT Sname
+FROM Student
+WHERE EXISTS
+  (SELECT * 
+   FROM SC 
+   WHERE Sno = Student.Sno
+       AND Cno = '1');
+因为能找到这样的一条记录，所以子查询的结果不为空集，那么 EXISTS 会返回 True，从而使 Student 表中的第一条记录中的 Sname 列的值被放入结果集中去。
+以此类推，遍历 Student 表中的所有记录后，就能得到所有选修了 1 号课程的学生的姓名。
+
+---Question: search for the name of students who have taken all courses.
+可以通过以下步骤的思路来实现：
+
+STEP1：先取 Student 表中的第一个元组，得到其 Sno 列的值。
+STEP2：再取 Course 表中的第一个元组，得到其 Cno 列的值。
+STEP3：根据 Sno 与 Cno 的值，遍历 SC 表中的所有记录（也就是选课记录）。若对于某个 Sno 和 Cno 的值来说，在 SC 表中找不到相应的记录，则说明该 Sno 对应的学生没有选修该 Cno 对应的课程。
+STEP4：对于某个学生来说，若在遍历 Course 表中所有记录（也就是所有课程）后，仍找不到任何一门他/她没有选修的课程，就说明此学生选修了全部的课程。
+STEP5：将此学生放入结果元组集合中。
+STEP6：回到 STEP1，取 Student 中的下一个元组。
+STEP7：将所有结果元组集合显示。
+
+SELECT Sname
+FROM Student
+Where NOT EXISTS
+    (SELECT *
+     FROM Course
+     WHERE NOT EXISTS
+         (SELECT *
+          FROM SC
+          WHERE Sno = Student.Sno
+                AND Cno = Course.Cno;
+         )
+    );
+ps: SC means selected course
+
+not exist 对应谓词逻辑中的“否 存在”（打不出符号，自行脑补）也就等同于（任意 否）所以为什么sql里只有存在命令而没有任意命令，因为任意命令可以用“否 存在 否”命令来表示。这就是为什么“课程表里的任意课程这名学生都选了”一定要改成“不 存在一门课程表里的课程，这名学生 没 选”的原因。exist可以表示任意和存在，in可以表示属于，not可以表示否，这样整个集合运算体系就都能表示了。
+严谨点应该是exist，and，or，in，not分别表示存在，合取，析取，属于，非，再加上比较操作符，可以还原所有的集合运算
+
+表结构：https://segmentfault.com/a/1190000007025543
