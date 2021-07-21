@@ -47,6 +47,9 @@ Where NOT EXISTS
     );
 ps: SC means selected course
 ***在这个例子中是 NOT EXISTS的嵌套，在我目前的理解中就是双重否定表肯定。（两重for all, not = exist)
+哦不对，最外层的NOT EXISTS 是对其第一层内所有的否定，第二个NOT EXISTS只是对内层condition的否定：
+Select each employee such that there does not exist a project controlled by department 5 that the employee does not work on. 
+page214 in book :“Fundamental of database systems”
 
 
 not exist 对应谓词逻辑中的“否 存在”（打不出符号，自行脑补）也就等同于（任意 否）所以为什么sql里只有存在命令而没有任意命令，因为任意命令可以用“否 存在 否”命令来表示。这就是为什么“课程表里的任意课程这名学生都选了”一定要改成“不 存在一门课程表里的课程，这名学生 没 选”的原因。exist可以表示任意和存在，in可以表示属于，not可以表示否，这样整个集合运算体系就都能表示了。
