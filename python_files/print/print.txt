@@ -7,3 +7,25 @@ number = 42
 
 print('%s %d' % (name, number))
 
+
+%d is for decimal integer
+
+%s is for generic string or object and in case of object, it will be converted to string
+
+Consider the following code
+
+name ='giacomo'
+number = 4.3
+print('%s %s %d %f %g' % (name, number, number, number, number))
+the out put will be
+
+giacomo 4.3 4 4.300000 4.3
+
+as you can see %d will truncate to integer, %s will maintain formatting, %f will print as float and %g is used for generic number
+
+obviously
+
+print('%d' % (name))
+will generate an exception; you cannot convert string to number
+
+
