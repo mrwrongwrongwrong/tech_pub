@@ -73,12 +73,14 @@ EER = ER +
 在1:N中，从N这边entity的foreign key指向 1那边entity的primary key。 注意：foreign key并不是当下这个entity的primary key，只是在这个relationship中连接另一个entity的primary key所用。
 在N:M中，需要建立一个中间的relationship的entity作为过渡，这个entity有两个foreign key，分别指向对应各自entity的parimary key。 注意：这个relationship过度的entity也可有其他的attribute。
 page291-292
-	
+
+
+page291-292k
+page291-292
 	
 ————Normal forms
 1NF: atomic attribute. 不存在组合的attribute
 2NF: During the 2NF, we eliminate the partial dependency. 什么意思？除了superkey之外的attributes，必须依赖于superkey中的全部attribute，而不能出现“只依赖superkey中部分attributes”的情况。https://www.youtube.com/watch?app=desktop&v=E2FWpqloJ3A
 3NF：During 3NF, we eliminate transitive dependency. 什么意思？就是不能出现“有一个attribute A依赖于 attribute B，同时attribute B还不是 superkey”的情况。https://www.youtube.com/watch?v=aAx_JoEDXQA
 
-page291-292k
-page291-292
+pagee 482
