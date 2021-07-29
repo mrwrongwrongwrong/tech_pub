@@ -1,0 +1,76 @@
+----------------------Coneceptual Design---------------------------------
+---Relational Database
+
+0. Schema
+ER schema 
+Relational database Schema
+page 290
+
+1.ER:Entity,relationship,attribute
+	Weak Entity, partial key
+	Relationship: Binary, Ternary, n-ary
+	Constraints in relationship: 1.cardinality ratio: 1:1, 1:N, N:1,M:N (between entity and entity)
+				     2.participantion constraint: total or partial (whether being related or not)  每次判断时，问自己一个问题：是不是这个entity的每个entity instance都可以参与？若是，则totoal；若不是，则partial。
+				     	total:这个entity的每个entity instance都可以参与， partial
+	Attribute:
+		key attribute, multivalued attribute, composite attribute, derived attribute
+    key: candidate key, superkey, primary key, foreign key
+
+2.EER(all about superclass and subclass):
+	EER model includes all the concepts from ER model, in addition:
+	1. Subclasses and superclasses
+	2. Specialization and generaliztion 
+	3. Category or union type 
+	4. Attribute and relationship inheritance 
+	Hence, its all about the relation between superclass and subclass.
+
+	
+
+Superclass/subclass
+	1. Superclass/subclass relationship: Employee/Secretary
+	2. IS-A relationship: Secretary IS-A Employee (disjoint, overlapping, total, partial)
+Ps. ISA can be:(the property of ISA)
+
+
+Relationship
+Chapter4:
+EER = ER + 
+	1. Subclass/superclass (type inheritance)
+	2. Specialization/generalization
+	3. Category/union
+	4. Aggregation
+
+---specialization
+	1. Constraints 
+		a. Predicate-defined (values on attribute)
+		b. Defining predicate (condition)
+		c. Attribute-defined(same attribute of the superclass)
+		d. User-defined
+		e. Disjointness constraint
+		f. Completeness(totalness) constraint
+		
+	
+	
+----------------------Physical Design---------------------------------	
+---Operations in SQL 
+	Select:
+	Project:
+	Rename:
+	Union:
+	Intersection:
+	Division:
+	Cartesian Product:
+	Difference:
+	Join:
+	Natural Join:
+	Inner Join:
+	EquiJoin:
+	ThetaJoin:
+
+---From ER schema to Relational Database Schema:
+对strong entity 和 weak entity而言，问题在primary key的选取上；若没有primary key， 用surrogate key 组装一个primary key出来。
+对relationship而言，分为1:1，1:N，N:M，三种情况。
+在1:N中，从N这边entity的foreign key指向 1那边entity的primary key。 注意：foreign key并不是当下这个entity的primary key，只是在这个relationship中连接另一个entity的primary key所用。
+在N:M中，需要建立一个中间的relationship的entity作为过渡，这个entity有两个foreign key，分别指向对应各自entity的parimary key。 注意：这个relationship过度的entity也可有其他的attribute。
+page291-292
+	
