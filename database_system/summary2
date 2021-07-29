@@ -87,3 +87,9 @@ pagee 482
 
 3.5NF : BCNF: During this process, we eliminate the mapping "non-primary attribute -> primary attribute"
 https://www.youtube.com/watch?v=NNjUhvvwOrk
+
+4NF: 1.BCNF + 2.No multivalued dependency
+https://www.youtube.com/watch?v=OTCuykFHBeA
+
+5NF: 1. 4NF 2. If join dependency exists, decompose the table
+https://www.youtube.com/watch?v=mbj3HSK28Kk
