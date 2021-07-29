@@ -77,7 +77,7 @@ page291-292
 	
 ————Normal forms
 1NF: atomic attribute. 不存在组合的attribute
-2NF: During the 2NF, we eliminate the primary dependency. 什么意思？除了superkey之外的attributes，必须依赖于superkey中的全部attribute，而不能出现“只依赖superkey中部分attributes”的情况。https://www.youtube.com/watch?app=desktop&v=E2FWpqloJ3A
+2NF: During the 2NF, we eliminate the partial dependency. 什么意思？除了superkey之外的attributes，必须依赖于superkey中的全部attribute，而不能出现“只依赖superkey中部分attributes”的情况。https://www.youtube.com/watch?app=desktop&v=E2FWpqloJ3A
 3NF：During 3NF, we eliminate transitive dependency. 什么意思？就是不能出现“有一个attribute A依赖于 attribute B，同时attribute B还不是 superkey”的情况。https://www.youtube.com/watch?v=aAx_JoEDXQA
 
 page291-292k
