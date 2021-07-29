@@ -84,3 +84,6 @@ page291-292
 3NF：During 3NF, we eliminate transitive dependency. 什么意思？就是不能出现“有一个attribute A依赖于 attribute B，同时attribute B还不是 superkey”的情况。https://www.youtube.com/watch?v=aAx_JoEDXQA
 
 pagee 482
+
+3.5NF : BCNF: During this process, we eliminate the mapping "non-primary attribute -> primary attribute"
+https://www.youtube.com/watch?v=NNjUhvvwOrk
