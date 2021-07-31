@@ -89,7 +89,15 @@ pagee 482
 https://www.youtube.com/watch?v=NNjUhvvwOrk
 
 4NF: 1.BCNF + 2.No multivalued dependency
+https://beginnersbook.com/2015/04/multivalued-dependency-in-dbms/
 https://www.youtube.com/watch?v=OTCuykFHBeA
 
 5NF: 1. 4NF 2. If join dependency exists, decompose the table
 https://www.youtube.com/watch?v=mbj3HSK28Kk
+
+https://www.geeksforgeeks.org/introduction-of-4th-and-5th-normal-form-in-dbms/
+
+If the join of R1 and R2 over C is equal to relation R then we can say that a join
+dependency (JD) exists
+
+https://www.tutorialspoint.com/Fifth-Normal-Form-5NF
