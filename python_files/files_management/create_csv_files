@@ -1,0 +1,13 @@
+
+
+with open("foo.csv", "w") as my_empty_csv:
+  # now you have an empty file already
+  pass  # or write something to it already
+  
+  https://stackoverflow.com/questions/33162253/how-do-i-create-an-empty-csv-file-on-a-specific-folder
+  
+  
+  An empty csv file can be created like any other file - you just have to perform any operation on it. With bash, you can do touch /path/to/my/file.csv.
+
+Note that you do not have to create an empty file for python to write in. 
+Python will do so automatically if you write to a non-existing file. In fact, creating an empty file from within python means to open it for writing, but not writing anything to it.
