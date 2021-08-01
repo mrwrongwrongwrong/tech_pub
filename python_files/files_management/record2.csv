@@ -1,0 +1,4 @@
+,,,,,,,,,,,
+,,,,,,,,,,,
+,,,,,,,,,,,,Action,AgentID,BenchmarkPrice,BenchmarkVWAP,Date,Directory,EndTime,ExecActualQty,ExecAlgo,ExecSlices,ExecTargetQty,ExecTime,MaxTime(secs),Penalty,Regime,StartTime,Symb,TransactionCost
+0,sell,yue201614@gmail.com--ec68f07a-8dae-4e3d-a793-e68c4720c2af,999.99,0.0,2021-07-28 18:59:38.629674,/Users/zhousq/Documents/Research/citiBank_project_yue/streamline&validation/workstation_07_26_2021/validation_test_envir6,2021-07-28 18:59:38.629445,0,AggressiveWithSlice,10,100,121.768996,120,12.5,text,2021-07-28 18:57:36.860449,ZNH0:MBO,-999.99
