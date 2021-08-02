@@ -1,0 +1,14 @@
+---instead of using os.system('cd ..')
+https://stackoverflow.com/questions/35277128/why-does-not-os-systemcd-mydir-work-and-we-have-to-use-os-chdirmydir-ins
+
+---Moving to another working path
+os.chdir()
+https://www.runoob.com/python/os-chdir.html
+
+path -- 要切换到的新路径。
+os.chdir( path )
+
+
+---moving up by one directory
+
+os.chdir("..")
