@@ -1,0 +1,15 @@
+
+Problems encoutered:
+
+1.get_script_name() takes 0 positional arguments but 1 was given
+https://stackoverflow.com/questions/43839536/typeerror-generatecode-takes-0-positional-arguments-but-1-was-given/43839602
+
+When you call a method on a class (such as generatecode() in this case), Python automatically passes self as the first argument to the function. So when you call self.my_func(), it's more like calling MyClass.my_func(self).
+
+So when Python tells you "generatecode() takes 0 positional arguments but 1 was given", it's telling you that your method is set up to take no arguments, but the self argument is still being passed when the method is called, so in fact it is receiving one argument.
+
+Adding self to your method definition should resolve the problem.
+
+def generatecode(self):
+    pass  # Do stuff here
+    
