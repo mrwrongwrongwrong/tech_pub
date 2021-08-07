@@ -2,3 +2,12 @@
 https://www.tutorialspoint.com/python/os_getcwd.htm
 
 https://www.runoob.com/python/python-tutorial.html
+
+
+How to upgrade python and solve the environmental problem on mac:
+https://opensource.com/article/19/5/python-3-default-mac
+1.brew install pyenv
+2.pyenv install 3.7.3
+3.pyenv global 3.7.3
+4.pyenv version
+5.echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
