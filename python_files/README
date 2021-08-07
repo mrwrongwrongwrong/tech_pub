@@ -3,6 +3,13 @@ https://www.tutorialspoint.com/python/os_getcwd.htm
 
 https://www.runoob.com/python/python-tutorial.html
 
+---upgrade python to version 3.7 in anaconda
+1.conda install -c anaconda python=3.7
+2.conda update --all
+https://stackoverflow.com/questions/46939562/update-to-python-3-7-using-anaconda
+This can be installed via conda with the command conda install -c anaconda python=3.7 as per https://anaconda.org/anaconda/python.
+Though not all packages support 3.7 yet, running conda update --all may resolve some dependency failures.
+
 
 How to upgrade python and solve the environmental problem on mac:
 https://opensource.com/article/19/5/python-3-default-mac
