@@ -11,10 +11,18 @@ git checkout
 ---solve conflict issue
 https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files
 
+Step1:
 git checkout master
 git fetch --all
 git branch backup-master
 git reset --hard origin/master
+
+Step2:
+git checkout yuezhou
+git reset --hard master
+git push -f 
+# force push the branch
+https://stackoverflow.com/questions/29796127/git-how-to-make-a-branch-be-the-same-as-master
 
 ---Git Update Local Branch with remote Master
 git checkout master
