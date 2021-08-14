@@ -1,0 +1,63 @@
+>>> df = pd.DataFrame([[0, 2, 3], [0, 4, 1], [10, 20, 30]],
+...                   columns=['A', 'B', 'C'])
+>>> df
+    A   B   C
+0   0   2   3
+1   0   4   1
+2  10  20  30
+————————————————
+原文链接：https://blog.csdn.net/sinat_29675423/article/details/87975489
+
+
+>>> df.at[4, 'B']
+2
+
+
+>>> df = pd.DataFrame([[1, 2], [4, 5], [7, 8]],
+...      index=['cobra', 'viper', 'sidewinder'],
+...      columns=['max_speed', 'shield'])
+>>> df
+            max_speed  shield
+cobra               1       2
+viper               4       5
+sidewinder          7       8
+————————————————
+
+选取元素
+>>> df.loc['cobra', 'shield']
+2
+
+选取行列返回dataframe
+>>> df.loc[['viper', 'sidewinder']]
+            max_speed  shield
+viper               4       5
+sidewinder          7       8
+
+
+
+pandas.DataFrame.iloc
+>>> mydict = [{'a': 1, 'b': 2, 'c': 3, 'd': 4},
+...           {'a': 100, 'b': 200, 'c': 300, 'd': 400},
+...           {'a': 1000, 'b': 2000, 'c': 3000, 'd': 4000 }]
+>>> df = pd.DataFrame(mydict)
+>>> df
+      a     b     c     d
+0     1     2     3     4
+1   100   200   300   400
+2  1000  2000  3000  4000
+————————————————
+
+按索引选取元素
+>>> df.iloc[0, 1]
+2
+
+获取行的series
+>>> type(df.iloc[0])
+<class 'pandas.core.series.Series'>
+>>> df.iloc[0]
+a    1
+b    2
+c    3
+d    4
+Name: 0, dtype: int64
+
