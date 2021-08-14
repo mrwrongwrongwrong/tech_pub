@@ -1,0 +1,23 @@
+import pandas as pd
+import pymysql
+
+# sql 命令
+sql_cmd = "SELECT * FROM table"
+
+# 用DBAPI构建数据库链接engine
+con = pymysql.connect(host=localhost, user=username, password=password, database=dbname, charset='utf8', use_unicode=True)
+df = pd.read_sql(sql_cmd, con)
+
+原文链接：https://blog.csdn.net/The_Time_Runner/article/details/86601988
+
+read_sql与read_sql_table、read_sql_query
+read_sql本质上是read_sql_table、read_sql_query的统一方式。
+
+三者都return返回DataFrame。
+
+read_sql_table
+Read SQL database table into a DataFrame.
+
+read_sql_query
+Read SQL query into a DataFrame.
+
