@@ -1,0 +1,11 @@
+Timestamp to datetime
+https://stackoverflow.com/questions/25852044/converting-pandas-tslib-timestamp-to-datetime-python
+
+Just try to_pydatetime()
+
+>>> import pandas as pd
+>>> t = pd.tslib.Timestamp('2016-03-03 00:00:00')
+>>> type(t)
+pandas.tslib.Timestamp
+>>> t.to_pydatetime()
+datetime.datetime(2016, 3, 3, 0, 0)
