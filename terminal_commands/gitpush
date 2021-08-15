@@ -4,6 +4,9 @@ git add .
 git commit -m "add demo code"
 git push origin yuezhou
 
+git checkout master
+git merge yuezhou
+
 ---git_build_branch
 git branch     (https://blog.csdn.net/elisonwu/article/details/8090896)
 git checkout
