@@ -1,0 +1,51 @@
+https://zhuanlan.zhihu.com/p/31360526
+Series
+
+Series其实就是一个一维数组，通过在对象后面加上[索引]就行了
+
+import pandas as pd
+obj=pd.Series([1,2,3,4])
+print obj[1],obj.values,obj.index
+
+
+Dataframe
+
+Dataframe是pandas最常见的数据结构，因为运用pandas读文件的结构都是Dataframe结构。
+
+1、读取行
+
+读取行有三种方法，分别是loc，iloc，ix。
+
+loc通过行标签索引来确定行的
+
+import pandas as pd
+d=[[1,2,3,4],[5,6,7,8]]
+index=["one","two"]
+df=pd.DataFrame(d, index=index)  
+print df.loc["one"]
+iloc通过行号索引来确定行
+
+import pandas as pd
+d=[[1,2,3,4],[5,6,7,8]]
+index=["one","two"]
+df=pd.DataFrame(d, index=index)  
+print df.iloc[0]
+ix就是iloc和loc的集合，loc和iloc的方法都可以用在ix上。
+
+
+
+2、读取列
+
+读取方式有三种，分别是[],"."和上面的三个。
+
+import pandas as pd
+d=[[1,2,3,4],[5,6,7,8]]
+index=["one","two"]
+df=pd.DataFrame(d, index=index)  
+print df[0]#直接在对象后面加上[]，括号里是列名
+print df.0#直接把列名给.出来
+print df.loc[:,[0]],df.iloc[:,[0]]
+#读取时，前面用：来表示全选，后面的用法和选取行的方法一样
+#这种方法也可以选取指定的行列
+总结：关于loc，iloc和ix如果不确定，就直接用ix，这个肯定没问题。这些东西还要自己打一遍代码才有印象。
+
