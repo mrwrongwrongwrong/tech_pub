@@ -1,0 +1,2 @@
+1.回归问题的目标是预测单个数值。例如，你可能想要预测的基于其占地面积、 年龄、 邮政编码等一套住房价格。
+https://docs.microsoft.com/zh-cn/archive/msdn-magazine/2019/march/test-run-neural-regression-using-pytorch
