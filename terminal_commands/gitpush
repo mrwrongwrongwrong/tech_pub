@@ -39,3 +39,27 @@ https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts
 https://stackoverflow.com/questions/17989165/git-checkout-master-error-the-following-untracked-working-tree-files-would-be-o
 https://stackoverflow.com/questions/16955980/git-merge-hotfix-branch-into-feature-branch
 https://stackoverflow.com/questions/32630379/git-your-branch-and-origin-somebranch-have-diverged-how-to-throw-away-local
+
+
+Patch:
+git checkout master
+git fetch --all
+git branch backup-master
+git reset --hard origin/master
+
+git checkout yuezhou
+git reset --hard master
+
+git checkout master
+git pull
+
+git checkout <your-branch>
+git merge master
+
+git checkout <your-branch>
+git add .
+git commit -m "add demo code"
+git push origin <your-branch>
+
+git checkout master
+git merge <your-branch>
