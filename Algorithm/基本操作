@@ -1,0 +1,13 @@
+---"for loop" with two variables? [duplicate]
+https://stackoverflow.com/questions/18648626/for-loop-with-two-variables
+
+If you want the effect of a nested for loop, use:
+
+import itertools
+for i, j in itertools.product(range(x), range(y)):
+    # Stuff...
+If you just want to loop simultaneously, use:
+
+for i, j in zip(range(x), range(y)):
+    # Stuff...
+    
