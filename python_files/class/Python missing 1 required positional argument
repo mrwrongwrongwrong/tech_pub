@@ -1,2 +1,9 @@
 ---
 https://careerkarma.com/blog/python-missing-required-positional-argument-self/
+
+
+The most common mistakes that are made that cause the “missing 1 required positional argument: ‘self’” error are:
+
+Forgetting to instantiate an object of a class
+Using the incorrect syntax to instantiate a class
+Let’s walk through each of these causes individually.
