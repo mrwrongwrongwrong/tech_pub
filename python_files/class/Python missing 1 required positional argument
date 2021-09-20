@@ -7,3 +7,6 @@ The most common mistakes that are made that cause the “missing 1 required posi
 Forgetting to instantiate an object of a class
 Using the incorrect syntax to instantiate a class
 Let’s walk through each of these causes individually.
+
+
+Next, we add a function to our class. Functions inside of classes are called methods. This method prints out the name of a player and their player type:
