@@ -1,0 +1,15 @@
+
+1.make sure you have installed the module.
+
+2.If the module is installed, and there is still an error report on it, such as:
+ No module named 'hps'
+Then what I have to do is to set the export path manually:
+
+export PATH="/usr/local/opt/php@8.0/bin:$PATH"
+export PATH="/usr/local/opt/php@8.0/sbin:$PATH"
+
+or 
+export PATH="/Users/zhousq/Library/Python/3.9/lib/python/site-packages"
+
+just put the corresponding module location between "" 
+and run export PATH="/Users/zhousq/Library/Python/3.9/lib/python/site-packages" in terminal 
