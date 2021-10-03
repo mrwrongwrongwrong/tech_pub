@@ -1,0 +1,19 @@
+1.  
+  File "test_no_tipping.py", line 4, in <module>
+    from hps.clients import SocketClient
+ModuleNotFoundError: No module named 'hps'
+
+2.
+(base) MBPganghinanban:clients zhousq$ pip3 install hps-nyu
+DEPRECATION: Configuring installation scheme with distutils config files is deprecated and will no longer work in the near future. If you are using a Homebrew or Linuxbrew Python, please see discussion at https://github.com/Homebrew/homebrew-core/issues/76621
+Requirement already satisfied: hps-nyu in /Users/zhousq/Library/Python/3.9/lib/python/site-packages (1.0.0)
+Requirement already satisfied: pyzmq in /Users/zhousq/Library/Python/3.9/lib/python/site-packages (from hps-nyu) (22.3.0)
+
+3.
+(base) MBPganghinanban:clients zhousq$ export PATH="/Users/zhousq/Library/Python/3.9/lib/python/site-packages"
+
+4.
+(base) MBPganghinanban:clients zhousq$ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+
+5.
+(base) MBPganghinanban:clients zhousq$ python3 test_no_tipping.py --port 5000 --name TEST
