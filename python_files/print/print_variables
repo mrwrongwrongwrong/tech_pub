@@ -1,0 +1,9 @@
+str1 = 'Python'
+print("Welcome %s" % str1)
+
+print("Actual Number = %d" %15)
+
+print("Float of the number = %f" %15)
+-> Float of the number = 15.000000
+
+https://www.w3resource.com/python/python-print-statement.php
