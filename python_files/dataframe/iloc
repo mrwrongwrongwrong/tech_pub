@@ -1,0 +1,50 @@
+
+import numpy as np
+import pandas as pd
+#创建一个Dataframe
+data=pd.DataFrame(np.arange(16).reshape(4,4),index=list('abcd'),columns=list('ABCD'))
+ 
+In[1]: data
+Out[1]: 
+    A   B   C   D
+a   0   1   2   3
+b   4   5   6   7
+c   8   9  10  11
+d  12  13  14  15
+ 
+#取索引为'a'的每一行（也就是一列）
+In[2]: data.loc['a']
+Out[2]:
+A    0
+B    1
+C    2
+D    3
+ 
+#取第一行数据，索引为'a'的行就是第一列中的所有的行，所以结果相同
+In[3]: data.iloc[0]
+Out[3]:
+A    0
+B    1
+C    2
+D    3
+
+————————————————
+版权声明：本文为CSDN博主「我是二师兄」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/W_weiying/article/details/81411257
+
+
+In[6]:data.loc[['a','b'],['A','B']] #提取index为'a','b',列名为'A','B'中的数据
+Out[6]: 
+   A  B
+a  0  1
+b  4  5
+ 
+In[7]:data.iloc[[0,1],[0,1]] #提取第0、1行，第0、1列中的数据
+Out[7]: 
+   A  B
+a  0  1
+b  4  5
+
+————————————————
+版权声明：本文为CSDN博主「我是二师兄」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/W_weiying/article/details/81411257
