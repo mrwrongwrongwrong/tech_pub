@@ -1,1 +1,67 @@
-1
+---Basic Unit of Work: a transaction
+Transaction is a program including accesses to the database. Page 2
+
+---Serializability
+is serializable if it produces the same return values from each read 
+and the same result state as a serial execution of the same transactions.
+
+---Criterion for serializability
+Two operations conflict if they both access the same data item and at least one is a write.
+Schedule is serializable if following graph (serialization graph) is acyclic: Page 6
+
+---Serialization Graph Theorem
+Theorem: If the serialization graph of a computation is acyclic, then every transaction reads the same values and writes the same values as it would in a serial execution consis- tent with the graph.
+Page 8
+
+---Guaranteeing Serializability
+Predeclaration Locking: Transaction obtains exclusive locks to data it needs, accesses the data, then releases the locks at the end.
+Exclusive lock: While T1 holds an exclusive lock on x, no other transaction may hold a lock on x.
+
+---Two Phase Locking
+Two phases: acquire locks as you go, release locks at end. Implies acquire all locks before releasing any.
+Theorem: If all transactions in an execution are two-phase locked, then the execution is serializable.
+
+---Read locks
+Read Lock Rules
+While T holds a read lock on x, no other transaction may acquire an exclusive lock on x.
+While T holds an exclusive lock on x, no other transaction may acquire any lock on x.
+
+---Deadlock Detection
+Construct a blocking (waits-for) graph. T −→ T’ if T needs a lock on item x, T’ has a conflicting lock on x or T’ is ahead of T on the wait queue for x and T’ seeks a conflicting lock on x.
+If system discovers a cycle, it aborts some transaction in cycle (perhaps lowest priority one or most recently started one).
+
+---Database Concurrency Control and Operating System Concurrency Control
+Similarities: notion of mutual exclusion. Con- cern with deadlock.
+Difference: Database concurrency control concerned with accesses to multiple data items. Operating Systems generally only concerned about synchronized access to single resources.
+
+---Multi-granularity Locks
+What if your system has some short trans- actions (update a seat) and some long ones (write a report)?
+Solution: use intention locks.
+
+---What are Intention Locks?
+In basic scheme, there are intention read and intention write locks. No intention lock con- flicts with any other.
+Intention lock down to the level of granularity above what you need, e.g. intention write the database and file, then write lock the record.
+Page19
+
+---Wait-Die and Kill-Wait
+Wait-die: If T tries to access a lock held by an older transaction (one with a lesser timestamp), then T aborts and restarts. Otherwise T waits for the other transac- tion to complete.
+Kill-wait: If T tries to access a lock held by an older transaction (one with a lesser timestamp), then T waits.
+Otherwise T aborts the other transaction.
+
+---Deadlock
+
+---Performance Conclusion
+Use a locking strategy such as two phase lock- ing.
+Page 24
+
+---Optimistic Protocols at Commit
+Ti’s readset, RS(i) = {x st Ti has read x} WS(i) = { x st Ti has written x to a workspace}
+When receiving endi, certifier does the follow- ing:
+RS(active) = ∪ RS(j) for Tj active but j ̸= i WS(active) = ∪ WS(j) for Tj active but j ̸= i
+if RS(i) ∩ WS(active) = φ
+and WS(i) ∩ (RS(active) ∪ WS(active)) = φ then certify (commit)
+else abort
+Page 26
+
+---Redo and Undo
+
