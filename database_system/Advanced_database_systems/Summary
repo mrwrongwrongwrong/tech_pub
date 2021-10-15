@@ -1,7 +1,7 @@
 ---Basic Unit of Work: a transaction
 Transaction is a program including accesses to the database. Page 2
 
----Serializability
+---Serializability. (ps non-serilizable == conflict serializable)
 is serializable if it produces the same return values from each read 
 and the same result state as a serial execution of the same transactions.
 
