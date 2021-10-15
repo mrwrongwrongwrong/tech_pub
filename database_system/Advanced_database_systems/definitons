@@ -1,0 +1,6 @@
+---Two Phase Locking Protocol
+https://www.geeksforgeeks.org/two-phase-locking-protocol/
+https://www.jianshu.com/p/ad13fbe343e4
+https://www.google.com/search?q=two+phase+locking+protocol+%E6%98%AF%E4%BB%80%E4%B9%88&sxsrf=AOaemvJyL6m2qg5_rtWkIbjJNf6O-0hhsQ%3A1634278443146&ei=KxxpYfytCP3NytMP0e6ugA0&ved=0ahUKEwi878TQ4cvzAhX9pnIEHVG3C9AQ4dUDCA4&uact=5&oq=two+phase+locking+protocol+%E6%98%AF%E4%BB%80%E4%B9%88&gs_lcp=Cgdnd3Mtd2l6EAMyBQghEKABMgUIIRCgATIFCCEQoAEyBQghEKABOgQIIxAnOgUIABDLAToGCAAQCBAeOgcIIRAKEKABSgQIQRgBUIQCWM0dYKIeaARwAHgBgAG9AYgBxxCSAQUxMC4xMJgBAKABAcABAQ&sclient=gws-wiz
+two phase locking protocol 是什么
+2阶段锁协议，就是给要做的数据上锁，然后执行完所有操作后再解锁，解锁时就不能有任何操作了。 所以是两阶段（上锁操作+解锁），来保证数据不出错。
