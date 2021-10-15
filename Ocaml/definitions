@@ -7,6 +7,9 @@ https://stackoverflow.com/questions/2842809/lexers-vs-parsers
 Symbols for the lexer: ASCII characters.
 Symbols for the parser: the particular tokens, which are terminal symbols of their grammar.
 
+what is parser?
+https://www.yisu.com/zixun/222249.html
+
 
 ---conditional operator:
 https://zh.wikipedia.org/wiki/%E6%9D%A1%E4%BB%B6%E8%BF%90%E7%AE%97%E7%AC%A6
