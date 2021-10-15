@@ -15,3 +15,29 @@ https://searchdatamanagement.techtarget.com/definition/RDBMS-relational-database
 ---Precedence Graph For Testing Conflict Serializability in DBMS
 https://www.geeksforgeeks.org/precedence-graph-for-testing-conflict-serializability-in-dbms/
 
+---Lock-Based Protocol
+https://www.javatpoint.com/dbms-lock-based-protocol
+
+---Multiple Granularity Locking in DBMS
+https://www.geeksforgeeks.org/multiple-granularity-locking-in-dbms/
+
+---三级加锁协议
+https://baike.baidu.com/item/%E4%B8%89%E7%BA%A7%E5%8A%A0%E9%94%81%E5%8D%8F%E8%AE%AE/1148391
+
+---如何理解两阶段封锁
+https://blog.csdn.net/fly2nn/article/details/61924810
+
+---两阶段锁（two-phase locking）
+https://zhuanlan.zhihu.com/p/59535337
+
+---intent lock
+https://stackoverflow.com/questions/33166066/why-do-we-need-intent-lock
+
+---Optimistic Algorithm
+https://courses.cs.vt.edu/~cs5204/fall99/distributedSys/optimistic.html
+
+---乐观并发控制
+https://zh.wikipedia.org/wiki/%E4%B9%90%E8%A7%82%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6
+
+---悲观并发控制
+https://zh.wikipedia.org/wiki/%E6%82%B2%E8%A7%82%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6
