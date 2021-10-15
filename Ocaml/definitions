@@ -34,3 +34,6 @@ https://zh.wikipedia.org/wiki/%E5%8F%82%E6%95%B0%E5%A4%9A%E6%80%81
 ---side effect
 Example side effects include modifying a non-local variable, modifying a static local variable, modifying a mutable argument passed by reference, performing I/O or calling other side-effect functions
 https://en.wikipedia.org/wiki/Side_effect_(computer_science)
+
+---Module and functors
+https://ocaml.org/learn/tutorials/modules.zh.html
