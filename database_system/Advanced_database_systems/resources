@@ -1,3 +1,5 @@
+---可串化
+https://blog.csdn.net/fmc201314/article/details/53872704
 
 ---Optimistic Algorithm
 https://courses.cs.vt.edu/~cs5204/fall99/distributedSys/optimistic.html
@@ -10,3 +12,4 @@ https://searchdatamanagement.techtarget.com/definition/RDBMS-relational-database
 
 ---Precedence Graph For Testing Conflict Serializability in DBMS
 https://www.geeksforgeeks.org/precedence-graph-for-testing-conflict-serializability-in-dbms/
+
