@@ -1,0 +1,52 @@
+---lecture notes from Cornell
+https://www.cs.cornell.edu/courses/cs3110/2014sp/lecture_notes.php
+
+---参数多态
+https://zh.wikipedia.org/wiki/%E5%8F%82%E6%95%B0%E5%A4%9A%E6%80%81
+
+---stack heap 静态分析
+https://www.google.com/search?q=stack+heap+%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90&sxsrf=AOaemvK2SOQyxeOm8BdyMxujIJZ5NMVdCA:1633574922228&ei=CmBeYYvDDefXytMP75erwAQ&start=10&sa=N&ved=2ahUKEwiL8M_npLfzAhXnq3IEHe_LCkgQ8tMDegQIARA9&biw=1527&bih=784&dpr=2.2
+
+---lexers vs parsers
+https://stackoverflow.com/questions/2842809/lexers-vs-parsers
+
+---quicksort
+https://gist.github.com/tautologico/925104
+https://stackoverflow.com/questions/10598823/ocaml-efficient-quicksort
+
+---Automata theory
+https://en.wikipedia.org/wiki/Automata_theory
+
+---stack machine
+https://en.wikipedia.org/wiki/Stack_machine
+
+---图灵完备性
+https://zh.wikipedia.org/wiki/%E5%9C%96%E9%9D%88%E5%AE%8C%E5%82%99%E6%80%A7
+
+---LL
+https://eli.thegreenplace.net/2008/09/26/recursive-descent-ll-and-predictive-parsers/
+
+---Parsing with OCamllex and Menhir
+https://dev.realworldocaml.org/parsing-with-ocamllex-and-menhir.html
+
+---Ocaml中的Monadic Parser，轻轻松松凑个解释器
+https://zhuanlan.zhihu.com/p/362480403
+https://www.google.com/search?q=parse+with+ocaml+%E7%BB%93%E6%9E%84&sxsrf=AOaemvKpNIgaIDdp_WaXY9MIeL_TZqE5ng%3A1634150700891&ei=LClnYZnKNeCVwbkPpIq6-Ac&ved=0ahUKEwiZkKTghcjzAhXgSjABHSSFDn8Q4dUDCA4&uact=5&oq=parse+with+ocaml+%E7%BB%93%E6%9E%84&gs_lcp=Cgdnd3Mtd2l6EAMyBQghEKABMgUIIRCgAToHCCMQsAMQJ0oECEEYAVCTuwFY2dgBYO7ZAWgLcAB4AIABgAGIAcoIkgEDOS4zmAEAoAEByAEBwAEB&sclient=gws-wiz
+
+---lexeme 是什么
+https://zh.wikipedia.org/wiki/%E8%AF%8D%E4%BD%8D
+
+---What and where are the stack and heap?
+https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap
+
+---parsing
+https://en.wikipedia.org/wiki/Parsing
+https://www.yisu.com/zixun/222249.html
+
+---type inference
+https://stackoverflow.com/questions/35168469/type-inference-in-ocaml
+https://stackoverflow.com/questions/69289003/ocaml-type-inference-a-concrete-example?noredirect=1#comment122533993_69289003
+https://www.google.com/search?q=type+inference&oq=type+inference&aqs=chrome..69i57j35i39j0i512j69i60l3j69i65l2.2540j0j7&sourceid=chrome&ie=UTF-8
+类型推论
+https://zh.wikipedia.org/wiki/%E7%B1%BB%E5%9E%8B%E6%8E%A8%E8%AE%BA
+https://www.researchgate.net/figure/Type-inference-rules-for-l_fig1_300116965
