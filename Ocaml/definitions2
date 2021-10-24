@@ -56,3 +56,11 @@ https://www.youtube.com/watch?v=QXjU9qTsYCc
 
 ---Context Free Grammar
 https://zh.wikipedia.org/wiki/%E4%B8%8A%E4%B8%8B%E6%96%87%E6%97%A0%E5%85%B3%E6%96%87%E6%B3%95
+
+---LL Parser
+本分析器由以下部件组成：
+
+一个输入缓冲区，存放输入符号串（由语法创建的）。
+一个分析栈，用于储存等待处理的终结符与非终结符的。
+一张分析表，标记了是否存在可用于目前分析栈与下一个输入符号的语法规则。
+https://zh.wikipedia.org/wiki/LL%E5%89%96%E6%9E%90%E5%99%A8
