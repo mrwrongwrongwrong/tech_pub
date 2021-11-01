@@ -1,0 +1,11 @@
+http://10.1.1.1:5000/login?username=alex&password=pw1
+
+#I just want to be able to manipulate the parameters
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    username = request.form['username']
+    print(username)
+    password = request.form['password']
+    print(password)
+    
+https://stackoverflow.com/questions/24892035/how-can-i-get-the-named-parameters-from-a-url-using-flask
