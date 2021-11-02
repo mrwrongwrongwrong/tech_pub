@@ -6,6 +6,8 @@ ocamlc -o test filename.ml
 ./test
 https://stackoverflow.com/questions/65917935/how-to-get-started-with-ocaml-on-vsc
 
+#use "filename.ml"
+
 ---ocaml
 
 ocaml abstractsyntax.ml
