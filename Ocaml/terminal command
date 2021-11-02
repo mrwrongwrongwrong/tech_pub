@@ -1,6 +1,11 @@
 ---online OCaml editor
 https://try.ocamlpro.com/
 
+---build
+ocamlc -o test filename.ml
+./test
+https://stackoverflow.com/questions/65917935/how-to-get-started-with-ocaml-on-vsc
+
 ---ocaml
 
 ocaml abstractsyntax.ml
