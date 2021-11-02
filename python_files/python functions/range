@@ -1,0 +1,23 @@
+range(start,end,step)
+
+range(start,end)
+
+range(end)
+
+range函数中带有三个参数：start、end、step。
+
+例如：产生数字0-1的列表：>>> list(range(0,10,1))
+
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]>>> list(range(0,10))
+
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]>>> list(range(10))
+
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+三种情况输出结果相同
+
+start 起始值(包含)，end 终止值(不包含)，step 步长。
+————————————————
+版权声明：本文为CSDN博主「weixin_39608301」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_39608301/article/details/113996479
+https://blog.csdn.net/weixin_39608301/article/details/113996479
