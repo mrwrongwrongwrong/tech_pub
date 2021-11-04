@@ -1,0 +1,50 @@
+When I get a piece code, I ask myself few questions:
+
+---Is it global or local variable?
+
+global variable vs local variable
+global variable: a global variable is a variable defined outside of the function and still visible to the function.
+local variable: a local variable is only visible and accessible inside of the function or procedure.
+
+---Is it statical scoping or dynamic scoping?
+
+Usually this type of question appears in a block where there are two functions f and g.
+Lets say that we execute function f first, then execute g right after f.
+
+statical scoping:
+the second function g still calls the variable defined globally.
+
+dynamic scoping:
+the second function g calls the variable from the result of first function f.
+
+---Is it explicit declaration or implicit declaration?
+explicit declaration: string name1; name1 = "abc"
+implicit declaration: string name1 = "abc"
+
+---is it deep binding or shallow binding?
+deep binding: 
+shallow binding:
+
+---is it pass by value, result, value/result, reference, name, need?
+formal parameter: thrower,the person who throws the baseball. Formal parameter is also the parameter in the brackets with the type.
+actual parameter: receiver,the person who receives the baseball. Actual parameter is the parameter inside of the function body to do the operations. 
+baseball is the value, such as int, string ...
+
+pass by value: 
+at the beginning of the function call, pass the value from formal parameter to the actual parameter. 
+at the end of the function call, the value is returned by actual parameters, and the formal parameter is destroyed.
+
+（the only differnce between pass by result and pass by value/result is the initialization of formal parameter）
+pass by result: At the call, the formal parameter is created in memory (on the stack) and is left uninitialized.
+pass by value/result: At the call, the formal parameter is created in memory (on the stack) and is initialized by the value of the actual parameter
+at the end of the function, the actual parameter's value is passed to formal parameter??? and the formal parameter is destoryed.
+
+pass by reference:
+during the function call, create a reference for each parameter used inside of the function, and the value is updated all the time.
+
+pass be name:
+  the actual parameter is only updated when you force evaluate it, the actual parameter is not updated even at the call time. 
+ 
+pass by need:
+  same as pass by name, except even if there are multiple force evaluate, I still evaluate it at the first force evalute, and ignore all the rest force evaluation in the procedure.
+
