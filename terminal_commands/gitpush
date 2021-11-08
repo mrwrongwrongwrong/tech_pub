@@ -74,3 +74,22 @@ git add .
 git commit -m "add demo code"
 git push origin origin
 git push origin <your-current-branch>
+
+---how to establish a branch locally
+https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
+
+for Linux:
+$ cd /home/user/my_project
+
+for macOS:
+$ cd /Users/user/my_project
+
+for Windows:
+$ cd C:/Users/user/my_project
+
+and type:
+$ git init
+
+$ git add .
+$ git add LICENSE
+$ git commit -m 'Initial project version'
