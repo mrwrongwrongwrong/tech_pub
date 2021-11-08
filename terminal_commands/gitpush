@@ -70,3 +70,7 @@ git merge <your-branch>
 https://stackoverflow.com/questions/37937984/git-refusing-to-merge-unrelated-histories-on-rebase
 
 git --work-tree="." pull --allow-unrelated-histories
+git add .
+git commit -m "add demo code"
+git push origin origin
+git push origin <your-current-branch>
