@@ -63,3 +63,10 @@ git push origin <your-branch>
 
 git checkout master
 git merge <your-branch>
+
+
+---Git refusing to merge unrelated histories on rebase
+
+https://stackoverflow.com/questions/37937984/git-refusing-to-merge-unrelated-histories-on-rebase
+
+git --work-tree="." pull --allow-unrelated-histories
