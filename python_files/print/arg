@@ -1,0 +1,19 @@
+
+
+So, to answer your specific question, sys.argv[1] represents the first command-line argument (as a string) supplied to the script in question. 
+It will not prompt for input, but it will fail with an IndexError if no arguments are supplied on the command-line following the script name.
+
+https://stackoverflow.com/questions/4117530/sys-argv1-meaning-in-script
+
+
+> python print_args.py
+['print_args.py'] 1
+
+> python print_args.py foo and bar
+['print_args.py', 'foo', 'and', 'bar'] 4
+
+> python print_args.py "foo and bar"
+['print_args.py', 'foo and bar'] 2
+
+> python print_args.py "foo and bar" and baz
+['print_args.py', 'foo and bar', 'and', 'baz'] 4
