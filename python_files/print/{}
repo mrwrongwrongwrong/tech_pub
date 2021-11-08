@@ -1,0 +1,7 @@
+        if not self.transaction_table.get(transaction_id):
+            raise InvalidInstructionError(
+                "Transaction {} does not exist".format(transaction_id))
+        self.operation_queue.append(
+            Operation("R", transaction_id, variable_id))
+            
+           "Transaction {} does not exist".format(transaction_id)
