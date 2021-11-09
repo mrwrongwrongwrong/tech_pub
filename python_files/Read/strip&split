@@ -1,0 +1,38 @@
+
+---strip(\n) and split()
+https://www.quora.com/What-is-the-meaning-of-strip-n-and-split-in-Python
+
+They are 2 different python methods. Let me try to explain:
+
+strip:
+
+this method removes the character(s) passed by argument (or white spaces if no argument is passed) from the beginning and from the end of a string.
+
+Examples:
+
+In this example, strip would be the exact same “Hello World” since we called it without arguments, and there are no leading or trailing spaces:
+
+>>>> example = "Hello World" 
+>>>> example.strip() 
+'Hello World' 
+Here, it would remove leading and trailing ‘0’ characters, resulting in the same “Hello World”:
+
+>>>> example = "000Hello World0" 
+>>>> example.strip('0') 
+'Hello World' 
+split:
+
+This method splits the input string into a list of strings. You can pass arguments too, known as delimiters. If you don’t pass any parameter, it will split using the default delimiter - space.
+
+It is easier with some examples:
+
+Passing no argument (using default delimiter):
+
+>>>> example = "Hello World" 
+>>>> example.split() 
+['Hello', 'World'] 
+Using the ‘x’ character delimiter:
+
+>>>> example = "HelloxWorld Foo" 
+>>>> example.split('x') 
+['Hello', 'World Foo'] 
