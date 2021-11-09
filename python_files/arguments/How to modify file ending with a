@@ -1,0 +1,12 @@
+CREATE TABLE tick(ID INT, date INT, endofdayprice INT)
+
+LOAD DATA INFILE "ticks.csv"
+INTO TABLE tick
+FIELDS TERMINATED BY "\t"
+
+SELECT max(ratios(2,endofdayprice))
+FROM endofdayprice
+     ASSUMING ASC date
+GROUP BY ID
+INTO OUTFILE "ticks.csv"
+FIELDS TERMINATED BY ","
