@@ -1,0 +1,5 @@
+
+---for _ in range(20)
+When you are not interested in some values returned by a function we use underscore in place of variable name . 
+Basically it means you are not interested in how many times the loop is run till now just that it should run some specific number of times overall.
+https://stackoverflow.com/questions/66425508/what-is-the-meaning-of-for-in-range
