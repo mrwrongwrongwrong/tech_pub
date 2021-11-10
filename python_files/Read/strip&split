@@ -1,4 +1,11 @@
 
+
+---split()
+> s = "one two 3.4 5,6 seven.eight nine,ten"
+> parts = re.split('\s|(?<!\d)[,.](?!\d)', s)
+['one', 'two', '3.4', '5,6', 'seven', 'eight', 'nine', 'ten']
+https://stackoverflow.com/questions/12683201/python-re-split-to-split-by-spaces-commas-and-periods-but-not-in-cases-like
+
 ---strip(\n) and split()
 https://www.quora.com/What-is-the-meaning-of-strip-n-and-split-in-Python
 
