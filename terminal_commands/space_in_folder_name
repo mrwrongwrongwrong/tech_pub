@@ -1,0 +1,7 @@
+Your cd "~/Library/Application Support/" trial ends up quoting too much (the tilde and its slash), while your cd ~/Library/Application Support/ trial quotes too little (it omits quoting the space in the directory name).
+
+The most common solution is to use single-character escaping to quote just the space:
+
+    cd ~/Library/Application\ Support
+    
+https://apple.stackexchange.com/questions/14683/how-to-cd-to-a-directory-with-a-name-containing-spaces-in-bash
