@@ -1,0 +1,10 @@
+
+Split by comma and strip whitespace in Python
+
+https://stackoverflow.com/questions/12683201/python-re-split-to-split-by-spaces-commas-and-periods-but-not-in-cases-like
+
+
+>>> string = "blah, lots  ,  of ,  spaces, here "
+>>> mylist = string.split(',')
+>>> print mylist
+['blah', ' lots  ', '  of ', '  spaces', ' here ']
