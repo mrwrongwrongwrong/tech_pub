@@ -17,7 +17,7 @@ In C++:
 版权声明：本文为CSDN博主「涛歌依旧」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/stpeace/article/details/51020388
 
-
+检查一下make all时的路径啊
 ---Dont forget to check your repository before you do the makefile:
 
 makefile:1: *** commands commence before first target.  Stop.
@@ -37,3 +37,5 @@ File "abstractSynax.ml", line 1:
 Error: I/O error: abstractSynax.ml: No such file or directory
 make: *** [all] Error 2
 MBPganghinanban:yue zhousq$ 
+
+---还有 检查一下文件名的拼写啊
