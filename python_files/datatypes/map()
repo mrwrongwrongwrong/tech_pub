@@ -1,0 +1,6 @@
+
+
+Python map() function is used to apply a function on all the elements of specified iterable and return map object. 
+Python map object is an iterator, so we can iterate over its elements. We can also convert map object to sequence objects such as list, tuple etc. using their factory functions.
+https://www.journaldev.com/22960/python-map-function
+
