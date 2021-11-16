@@ -16,3 +16,24 @@ In C++:
 ————————————————
 版权声明：本文为CSDN博主「涛歌依旧」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/stpeace/article/details/51020388
+
+
+---Dont forget to check your repository before you do the makefile:
+
+makefile:1: *** commands commence before first target.  Stop.
+MBPganghinanban:project zhousq$ ls
+FinalProject                    calculator-menhir               e                               makefile
+HPL_final_project               calculator-menhir (1).zip       exam                            makefile 2
+LL1parser                       calculator-ocamlyacc            grammarLR0conflicts             yue
+LL1parser.zip                   calculator-ocamlyacc (1).zip    grammarLR0conflicts.zip         yue_nov15th
+MBPganghinanban:project zhousq$ cd yue
+MBPganghinanban:yue zhousq$ make all
+/bin/rm -f lexer.ml parser.ml *.cmo *.cmi
+ls
+Abstractsyntax.ml       abstractsyntax copy.ml  lexer.mll               midterm_practice.ml     parser copy 3.mly       parser.mly
+README.md               lexer copy.mll          makefile                parser copy 2.mly       parser copy.mly         prettyprint.ml
+ocamlc -g -c str.cma abstractSynax.ml prettyprint.ml
+File "abstractSynax.ml", line 1:
+Error: I/O error: abstractSynax.ml: No such file or directory
+make: *** [all] Error 2
+MBPganghinanban:yue zhousq$ 
