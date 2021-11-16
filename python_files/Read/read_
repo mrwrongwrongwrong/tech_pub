@@ -3,3 +3,13 @@
                 "Transaction {} does not exist".format(transaction_id))
         self.operation_queue.append(
             Operation("R", transaction_id, variable_id))
+
+
+
+Python 提供了如下 3 种函数，它们都可以帮我们实现读取文件中数据的操作：
+read() 函数：逐个字节或者字符读取文件中的内容，若有参数，则根据指定值读取字节或字符;
+readline() 函数：逐行读取文件中的内容；
+readlines() 函数：一次性读取文件中多行内容。
+
+http://web.suda.edu.cn/hejun/chapter10/python_10_2.html
+https://www.runoob.com/python/file-readlines.html
