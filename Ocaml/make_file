@@ -1,3 +1,7 @@
 
 GNU make yields "commands commence before first target" error
 https://stackoverflow.com/questions/4713663/gnu-make-yields-commands-commence-before-first-target-error
+
+makefile:1: *** commands commence before first target.  Stop.
+https://stackoverflow.com/questions/2912689/commence-before-first-target-stop-error/16781572
+if you have added a new line, Make sure you have added next line syntax in previous line. typically if "\" is missing in your previous line of changes, you will get this error.
