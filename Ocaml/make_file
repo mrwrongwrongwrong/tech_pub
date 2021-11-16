@@ -5,3 +5,14 @@ https://stackoverflow.com/questions/4713663/gnu-make-yields-commands-commence-be
 makefile:1: *** commands commence before first target.  Stop.
 https://stackoverflow.com/questions/2912689/commence-before-first-target-stop-error/16781572
 if you have added a new line, Make sure you have added next line syntax in previous line. typically if "\" is missing in your previous line of changes, you will get this error.
+
+
+In C++:
+我们知道， 在C/C++语言中， 可以用\来换行， 此时要注意， 在一行的最后面加上\,  而这个\后面不能再有任何字符， 哪怕是空格， 也不允许， 否则出错。
+
+        对于makefile, 也有类似的原则， 最近写makefile,  一不小心， 在\后多了个空格， 结果编译出现：commands commence before first target
+
+        要小心啊。
+————————————————
+版权声明：本文为CSDN博主「涛歌依旧」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/stpeace/article/details/51020388
