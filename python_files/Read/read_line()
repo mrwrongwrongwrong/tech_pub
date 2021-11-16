@@ -1,0 +1,9 @@
+readlines splits the entire file into lines and is equivalent to file.read().split('\n'), but is a bit more efficient. Your example,
+
+for line in file:
+    values = line.split()
+splits each line by its spaces, building a list of words in the line. 
+value is overwritten on each iteration so unless you save values somewhere, only parts of the file are in-memory at a single time.
+
+https://www.w3schools.com/python/ref_file_readlines.asp
+https://www.stechies.com/read-file-line-by-line-python/
