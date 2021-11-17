@@ -6,7 +6,7 @@ makefile:1: *** commands commence before first target.  Stop.
 https://stackoverflow.com/questions/2912689/commence-before-first-target-stop-error/16781572
 if you have added a new line, Make sure you have added next line syntax in previous line. typically if "\" is missing in your previous line of changes, you will get this error.
 
-
+Problems encountered:
 In C++:
 我们知道， 在C/C++语言中， 可以用\来换行， 此时要注意， 在一行的最后面加上\,  而这个\后面不能再有任何字符， 哪怕是空格， 也不允许， 否则出错。
 
@@ -39,3 +39,13 @@ make: *** [all] Error 2
 MBPganghinanban:yue zhousq$ 
 
 ---还有 检查一下文件名的拼写啊
+
+
+---Simple way to write makefile in OCaml
+https://stackoverflow.com/questions/1483536/whats-a-stupidly-simple-way-to-compile-an-ocaml-project
+ocamlopt -o execname module1.ml module2.ml
+You can use ocamlc to compile to bytecode instead.
+
+Generally the standard library is already included. If you're on a *nix system, and want to include, say, the unix library, you'd do something like
+
+ocamlopt -o execname unix.cmxa module1.ml module2.ml
