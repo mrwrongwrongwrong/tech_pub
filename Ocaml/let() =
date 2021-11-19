@@ -1,0 +1,13 @@
+What does "let () = " mean in Ocaml?
+let () = print_string "something" in
+fn
+
+14
+
+There's nothing special about () in this let expression, it's just a pattern. All let expressions look like let pattern = expression in other-expression. Here the pattern will always match, because print_string returns unit, and () is the only value of that type. In this way, it's just another way of combining two expressions into one when the first one is really more of a statement (returns unit).
+
+So you're right, the construct has pretty much the same meaning as using the ; operator. The only real difference is in the precedence. If, for example, you write
+
+if x < 3 then
+    print_string "something";
+    f x
