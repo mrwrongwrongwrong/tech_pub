@@ -1,0 +1,22 @@
+Converting map to list, tuple, set
+Since map object is an iterator, we can pass it as an argument to the factory methods for creating a list, tuple, set etc.
+
+
+map_iterator = map(to_upper_case, ['a', 'b', 'c'])
+my_list = list(map_iterator)
+print(my_list)
+
+map_iterator = map(to_upper_case, ['a', 'b', 'c'])
+my_set = set(map_iterator)
+print(my_set)
+
+map_iterator = map(to_upper_case, ['a', 'b', 'c'])
+my_tuple = tuple(map_iterator)
+print(my_tuple)
+Output:
+
+
+['A', 'B', 'C']
+{'C', 'B', 'A'}
+('A', 'B', 'C')
+https://www.journaldev.com/22960/python-map-function
